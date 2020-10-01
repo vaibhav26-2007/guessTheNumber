@@ -1,6 +1,9 @@
 import random
 import sys
-
+def speak(str):
+    from win32com.client import Dispatch
+    speak=Dispatch("SAPI.spVoice")
+    speak.Speak(str)
 
 def guessTheNumber():
 
